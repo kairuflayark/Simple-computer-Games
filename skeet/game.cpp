@@ -151,127 +151,15 @@ void Game :: advanceBird()
  **************************************************************************/
 Bird* Game :: createBird()
 {
-   Bird* newBird = NULL;
+    int randomBird = random(1, 12);
 
-   newBird = new Bird();
-   int randomBird = random(1, 12);
+    Bird* newBird = null   
 
-   switch (randomBird)
-   {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      {
-         regularBird* regular = new regularBird(); 
-         newBird = regular;
-         break;
-      }
-      case 6:
-      case 7:
-      case 8:
-      {
-         tBird* t = new tBird();
-         newBird = t;
-         break;
-      }
-      case 9:
-      {
-         sacredBird* sacred = new sacredBird();
-         newBird = sacred;
-         break;
-      }
-      case 10:
-      case 11:
-      {
-         shotgunBird* sBird = new shotgunBird();
-         newBird = sBird;
-         break;
-      }
-   }
-
-   // set position 
-   Point startBird;
-   startBird.setX(topLeft.getX());
-   startBird.setY(random(bottomRight.getY(), topLeft.getY()));
-   newBird->setPoint(startBird);
-   // set velocity
-   Velocity startVelocity;
-   switch (randomBird)
-   {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      {
-         if(startBird.getY() <= 0)
-         {
-            startVelocity.setDx(random(.75, 2.0));
-            startVelocity.setDy(random(.75, 2.0));
-         }
-         else
-         {
-            startVelocity.setDx(random(.75, 2.0));
-            startVelocity.setDy(random(-2.0, -.75));
-         }
-         break;
-      }
-      case 6:
-      case 7:
-      case 8:
-      {
-         if(startBird.getY() <= 0)
-         {
-            startVelocity.setDx(random(.5, 1.5));
-            startVelocity.setDy(random(.5, 1.5));
-         }
-         else
-         {
-            startVelocity.setDx(random(.5, 1.5));
-            startVelocity.setDy(random(-1.5, -.5));
-         }
-         break;
-      }
-      case 9: 
-      {
-         if(startBird.getY() <= 0)
-         {
-            startVelocity.setDx(random(.75, 2.0));
-            startVelocity.setDy(random(.75, 2.0));
-         }
-         else
-         {
-            startVelocity.setDx(random(.75, 2.0));
-            startVelocity.setDy(random(-2.0, -.75));
-         }
-         break;
-      }
-      case 10:
-      case 11:
-      {
-         if(startBird.getY() <= 0)
-         {
-            startVelocity.setDx(random(1.0, 3.0));
-            startVelocity.setDy(random(1.0, 3.0));
-         }
-         else
-         {
-            startVelocity.setDx(random(1.0, 3.0));
-            startVelocity.setDy(random(-3.0, -1.0));
-         }
-         break;
-      }
-   }
-   
 
    
-   newBird->setVelocity(startVelocity);
-    
+    newBird = birdFactory.instantiateBird(randomBird, topLeft.getX(), bottomRight.getY(), topLeft.getY())
    
-   
-   
+
    return newBird;
 }
 
