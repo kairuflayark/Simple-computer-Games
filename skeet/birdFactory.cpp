@@ -77,13 +77,9 @@ void BirdFactory ::createVelocity()
    case 9:
    {
       if (startPoint.getY() <= 0)
-      {
          startVelocity = movement->movementFactory(3)->move();
-      }
       else
-      {
          startVelocity = movement->movementFactory(4)->move();
-      }
       break;
    }
    case 6:
@@ -91,26 +87,18 @@ void BirdFactory ::createVelocity()
    case 8:
    {
       if (startPoint.getY() <= 0)
-      {
          startVelocity = movement->movementFactory(1)->move();
-      }
       else
-      {
          startVelocity = movement->movementFactory(2)->move();
-      }
       break;
    }
    case 10:
    case 11:
    {
       if (startPoint.getY() <= 0)
-      {
          startVelocity = movement->movementFactory(5)->move();
-      }
       else
-      {
          startVelocity = movement->movementFactory(6)->move();
-      }
       break;
    }
    }
