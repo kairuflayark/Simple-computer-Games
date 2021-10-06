@@ -2,6 +2,7 @@
 #include <cmath>
 
 #define BULLET_SPEED 10.0
+#define M_PI 3.14
 float angle = 60.0;
 
 /********************************************

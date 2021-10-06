@@ -26,6 +26,7 @@
 #include "bullet.h"
 #include "bird.h"
 #include "allBirds.h"
+#include "birdFactory.h"
 
 #define CLOSE_ENOUGH 15
 #define MAX_BIRDS 3
@@ -79,6 +80,7 @@ private:
    
    // TODO: declare your bird here (e.g., "Bird * bird;")
    Bird * bird[MAX_BIRDS];
+   BirdFactory birdFactory;
    bool start;
    float timeCount;
    

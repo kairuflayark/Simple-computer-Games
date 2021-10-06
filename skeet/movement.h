@@ -12,38 +12,69 @@ class Movement
 
 #endif
 
+
+#ifndef MOVESLOW_H
+#define MOVESLOW_H
+
 class MoveSlow: public Movement
 {
     public:
         Velocity move();
 };
 
-class MoveDownSlow
+#endif
+
+#ifndef MOVEDOWNSLOW_H
+#define MOVEDOWNSLOW_H
+
+class MoveDownSlow: public Movement
 {
     public:
         Velocity move();
 };
 
-class MoveMedium
+#endif
+
+#ifndef MOVEMEDIUM_H
+#define MOVEMEDIUM_H
+
+class MoveMedium: public Movement
 {
     public:
         Velocity move();
 };
 
-class MoveDownMedium
+#endif
+
+#ifndef MOVEDOWNMEDIUM_H
+#define MOVEDOWNMEDIUM_H
+
+class MoveDownMedium: public Movement
 {
     public:
         Velocity move();
 };
 
-class MoveFast
+#endif
+
+#ifndef MOVEFAST_H
+#define MOVEFAST_H
+
+class MoveFast: public Movement
 {
     public:
         Velocity move();
 };
 
-class MoveDownFast
+#endif
+
+#ifndef MOVEDOWNFAST_H
+#define MOVEDOWNFAST_H
+
+class MoveDownFast: public Movement
 {
     public:
         Velocity move();
 };
+
+#endif

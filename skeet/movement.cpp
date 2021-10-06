@@ -2,6 +2,15 @@
 #include "velocity.h"
 #include "uiDraw.h"
 
+/****************************************
+ * Movement Factory
+ * 1: Slow
+ * 2: Down and slow
+ * 3: Medium
+ * 4: Down and medium
+ * 5: Fast
+ * 6: Down and fast
+ ****************************************/
 Movement * Movement :: movementFactory(int type)
 {
     switch (type)
@@ -67,7 +76,7 @@ Velocity MoveFast :: move()
     return velocity;
 }
 
-Velocity MoveFast :: move()
+Velocity MoveDownFast :: move()
 {
     Velocity velocity;
     velocity.setDx(random(1.0, 3.0));
