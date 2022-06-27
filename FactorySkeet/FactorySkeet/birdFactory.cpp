@@ -3,7 +3,9 @@
 using namespace std;
 
 	
-	// Creates the bird object
+	/*
+    * Instantiate bird
+    */
 	Bird* BirdFactory ::instantiateBird(int type, double x, double y1, double y2){
         birdType = type;
 

@@ -152,15 +152,9 @@ void Game :: advanceBird()
 Bird* Game :: createBird()
 {
     int randomBird = random(1, 12);
-
     Bird* newBird = NULL;
-
-
-   
     newBird = birdFactory.instantiateBird(randomBird, topLeft.getX(), bottomRight.getY(), topLeft.getY());
-   
-
-   return newBird;
+    return newBird;
 }
 
 /**************************************************************************
